@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://investin.org/cdn/shop/articles/software-engineering-skills_resize_md_1200x1200.jpg?v=1634293058');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+#main-img{
+    border-radius: 50%;
+}
+.todo{
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid black;
+    backdrop-filter: blur(20px);
+    margin: 100px auto 10px;
+    padding: 30px 30px 70px;
+    border-radius: 20px;
+}
+.todo h1{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo h1 img{
+    width: 100px;
+    margin-left: auto;
+    animation: glowing-border 3s infinite;
+}
+.rainbow-text {
+    background: linear-gradient(45deg, #e1ff00, #ff0000c9, #00ffff, #ff9d00, #ff2a00);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    background-size: 600% 600%;
+    animation: rainbow-animation 3s ease infinite;
+}
+@keyframes rainbow-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: lightgray;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    animation: glowing-border 3s infinite;
+}
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0015; 
+    }
+    50% {
+        box-shadow: 0 0 10px #00d9ff, 0 0 20px #00d5ff, 0 0 30px #00f2ff, 0 0 40px #00eeff, 0 0 50px #00fbff;
+    }
+    100% {
+        box-shadow: 0 0 5px #1500ff, 0 0 10px #1e00ff, 0 0 15px #2f00ff, 0 0 20px #5500ff, 0 0 25px #1e00ff;
+    }
+}
+input{
+    background: transparent;
+    flex: 1px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    padding: 15px 50px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url("https://img.freepik.com/free-vector/stroke-round-geometric-shape-vector_53876-175080.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1723161600&semt=ais_hybrid");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    color: lightgrey;
+    text-decoration: line-through black 3px;
+}
+ul li.checked::before{
+    background-image: url("https://media.istockphoto.com/id/496603666/vector/flat-icon-check.jpg?s=612x612&w=0&k=20&c=BMYf-7moOtevP8t46IjHHbxJ4x4I0ZoFReIp9ApXBqU=");
+}
+ul li span{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: lightgray;
+}
